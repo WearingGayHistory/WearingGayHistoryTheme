@@ -27,18 +27,23 @@
 
     jQuery( document ).ready(function( $ ) {
         $( '#my-slider' ).sliderPro({
-            width: 1500,
+        width: 950,
             height: 500,
+            orientation: 'vertical',
+            loop: false,
             arrows: true,
             buttons: false,
-            waitForLayers: true,
-            thumbnailWidth: 200,
-            thumbnailHeight: 100,
+            thumbnailsPosition: 'right',
             thumbnailPointer: true,
-            autoplay: true,
-            autoScaleLayers: true,
+            thumbnailWidth: 300,
             breakpoints: {
+                800: {
+                    thumbnailsPosition: 'bottom',
+                    thumbnailWidth: 270,
+                    thumbnailHeight: 100
+                },
                 500: {
+                    thumbnailsPosition: 'bottom',
                     thumbnailWidth: 120,
                     thumbnailHeight: 50
                 }
