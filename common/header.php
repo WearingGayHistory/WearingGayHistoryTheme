@@ -2,12 +2,12 @@
 <html class="<?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
 <head>
     <?php
-        if(is_current_url('/')) { 
+        if(is_current_url('/')) {
             echo '<link rel="stylesheet" type="text/css" href="themes/WearingGayHistoryTheme/css/mosaic-style.css" />';
         }
         ?>
-    
-    
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php if ($description = option('description')): ?>
@@ -40,12 +40,12 @@
     queue_css_file('style');
     echo head_css();
     ?>
-    
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
     <!-- JavaScripts -->
     <?php queue_js_file(array('globals', 'vendor/jquery-accessibleMegaMenu')); ?>
-    <?php echo head_js(); ?>
+    
     <?php // see footer for bootstrap-related js...
     queue_js_file('globals');
     echo head_js(); ?>
@@ -54,10 +54,10 @@
     <?php include_once("analyticstracking.php") ?>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
     <?php if ($temp_banner) : ?>
-   
+
     <?php endif; ?>
     <div>
-        
+
     <div class="container" id="logo">
         <div class="row">
         <div class="col-md-12 col-sm-12" id="logoimg">
@@ -79,15 +79,15 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
                 <?php $nav = public_nav_main(); echo $nav->setUlClass('nav navelement navbar-nav')?>
-            
+
             <ul class="nav navbar-nav">
                 <li><a href="https://twitter.com/WearingGayHist"  target="__blank"><i class="fa fa-lg fa-twitter"></i></a></li>
                 <li><a href="https://www.facebook.com/Wearinggayhistory"  target="__blank"><i class="fa fa-lg fa-facebook"></i></a></li>
             </ul>
-            
+
             </div>
-            
-            
+
+
         </nav>
         </div>
         <div class="container" id="wrapper">
